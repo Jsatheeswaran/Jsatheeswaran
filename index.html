@@ -22,7 +22,7 @@
               "slide-right": "slideRight 0.7s ease-out forwards",
               "slide-left": "slideLeft 0.7s ease-out forwards",
               "slide-down": "slideDown 0.7s ease-out forwards",
-              "slide-up": "slideUp 0.7s ease-out forwards",
+              "slide-up": "slideUp 0.3s ease-out forwards",
               progress: "growWidth 2s ease-in-out forwards",
               vibrate: "vibrate 1s cubic-bezier(.36,.07,.19,.97)",
             },
@@ -50,11 +50,11 @@
               },
               slideUp: {
                 "0%": {
-                  transform: "translateY(50%)",
+                  transform: "translateY(0%)",
                   opacity: "0",
                 },
                 "100%": {
-                  transform: "translateY(0)",
+                  transform: "translateY(-20%)",
                   opacity: "1",
                 },
               },
@@ -99,16 +99,35 @@
   </head>
   <body class="bg-slate-800 p-0 m-0">
     <header class="fixed top-0 w-full z-10 bg-slate-900 p-5">
-      <nav class="">
-        <div class="flex justify-end px-5">
+      <nav
+        class="flex flex-col justify-start gap-5 items-start md:items-center md:flex-row md:justify-between"
+      >
+        <div class="text-left">
+          <span class="text-white text-xl">Ꮥ🅐ᵗ𝐇єᵉⓢʷᎯ𝔯Ɑ几</span>
+        </div>
+        <div class="flex justify-end">
           <ul class="flex gap-5 text-white">
-            <li><a href="#profile">Intro</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experinece</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#certifications">Certification</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="hover:scale-110 hover:-mt-2 ease-in duration-200">
+              <a href="#profile">Intro</a>
+            </li>
+            <li class="hover:scale-110 hover:-mt-2 ease-in duration-200">
+              <a href="#skills">Skills</a>
+            </li>
+            <li class="hover:scale-110 hover:-mt-2 ease-in duration-200">
+              <a href="#experience">Experinece</a>
+            </li>
+            <li class="hover:scale-110 hover:-mt-2 ease-in duration-200">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="hover:scale-110 hover:-mt-2 ease-in duration-200">
+              <a href="#education">Education</a>
+            </li>
+            <li class="hover:scale-110 hover:-mt-2 ease-in duration-200">
+              <a href="#certifications">Certification</a>
+            </li>
+            <li class="hover:scale-110 hover:-mt-2 ease-in duration-200">
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -182,7 +201,7 @@
       </button>
     </div>
     <main
-      class="container flex flex-col gap-10 md:gap-20 pl-16 pr-5 md:pl-20 md:pr-20 pb-10 pt-32 text-white"
+      class="flex flex-col gap-10 md:gap-20 pl-16 pr-5 md:pl-20 md:pr-20 pb-10 pt-32 text-white"
     >
       <section id="profile" class="flex flex-col-2 gap-8">
         <div
@@ -212,7 +231,7 @@
         </div>
       </section>
       <section id="intro">
-        <p class="container">
+        <p class="">
           I'm a dediacted React Developer with 2.5 years of experience in
           building engaging and efficient web applications.I've dedicated my
           career to creating user-centric solutions that enhance digital
@@ -1159,11 +1178,12 @@
                   data-animation="animate-slide-right"
                   class="animate-on-scroll bg-white pt-2 pl-2 rounded"
                 >
-                  <img
-                    src="assets/eric_logo.png"
-                    class="w-80 object-contain"
-                    alt="Profile Picture"
-                  />
+                  <a href="https://1rs.io/" target="_blank">
+                    <img
+                      src="assets/eric_logo.png"
+                      class="w-80 object-contain"
+                      alt="Profile Picture"
+                  /></a>
                 </div>
                 <div
                   data-animation="animate-slide-left"
@@ -1213,7 +1233,9 @@
           <!-- Project: ERIC -->
           <div data-animation="animate-vibrate" class="animate-on-scroll">
             <div class="flex justify-center bg-slate-700 rounded-t p-5">
-              <img class="object-cover w-48" src="assets/eric_prod.png" />
+              <a href="https://1rs.io/" target="_blank">
+                <img class="object-cover w-48" src="assets/eric_prod.png"
+              /></a>
             </div>
             <div class="shadow-2xl rounded-lg p-6">
               <h3 class="text-xl font-semibold mb-2">
@@ -1250,7 +1272,9 @@
           <!-- Project: Raise -->
           <div data-animation="animate-vibrate" class="animate-on-scroll">
             <div class="flex justify-center bg-slate-700 rounded-t p-5">
-              <img class="object-cover w-28" src="assets/raise_prod.svg" />
+              <a href="https://www.raisetech.io/" target="_blank">
+                <img class="object-cover w-28" src="assets/raise_prod.svg"
+              /></a>
             </div>
             <div class="shadow-2xl rounded-lg p-6">
               <h3 class="text-xl font-semibold mb-2">
@@ -1288,18 +1312,19 @@
         <h2 class="text-3xl font-semibold mb-4">Education</h2>
         <div class="grid md:grid-cols-3 gap-6">
           <!-- B.Tech in Information Technology -->
-          <div
-            data-animation="animate-slide-up"
-            class="animate-on-scroll shadow-lg rounded-lg p-6 flex flex-col items-center"
-          >
+          <div class="shadow-lg rounded-lg p-6 flex flex-col items-center">
             <a href="https://kamarajengg.edu.in/" target="_blank">
               <img
+                data-animation="animate-fade-in"
                 src="assets/kcet.png"
                 alt="University Logo"
-                class="w-52 h-52 object-cover mb-4"
+                class="animate-on-scroll w-52 h-52 object-cover mb-4"
               />
             </a>
-            <h3 class="text-xl font-semibold">
+            <h3
+              data-animation="animate-slide-left"
+              class="animate-on-scroll text-xl font-semibold"
+            >
               B.Tech in Information Technology
             </h3>
             <p class="text-gray-600">76%</p>
@@ -1313,18 +1338,21 @@
 
           <!-- HSC -->
           <div
-            data-animation="animate-slide-up"
             class="animate-on-scroll shadow-lg rounded-lg p-6 flex flex-col items-center"
           >
             <a href="https://www.mnujnhss.com/" target="_blank">
               <img
                 src="assets/mnuj.jpg"
                 alt="School Logo"
-                class="w-52 h-52 object-cover rounded-full mb-4"
+                data-animation="animate-fade-in"
+                class="animate-on-scroll w-52 h-52 object-cover rounded-full mb-4"
               />
             </a>
             <!-- Replace with your school logo path -->
-            <h3 class="text-xl font-semibold">
+            <h3
+              data-animation="animate-slide-left"
+              class="animate-on-scroll text-xl font-semibold"
+            >
               Higher Secondary Certificate (HSC)
             </h3>
             <p class="text-gray-600">80%</p>
@@ -1338,17 +1366,20 @@
 
           <!-- HSLC -->
           <div
-            data-animation="animate-slide-up"
             class="animate-on-scroll shadow-lg rounded-lg p-6 flex flex-col items-center"
           >
             <a href="https://www.mnujnhss.com/" target="_blank">
               <img
                 src="assets/mnuj.jpg"
                 alt="School Logo"
-                class="w-52 h-52 object-cover rounded-full mb-4"
+                data-animation="animate-fade-in"
+                class="animate-on-scroll w-52 h-52 object-cover rounded-full mb-4"
             /></a>
             <!-- This could be the same or a different school logo -->
-            <h3 class="text-xl font-semibold">
+            <h3
+              data-animation="animate-slide-left"
+              class="animate-on-scroll text-xl font-semibold"
+            >
               High School Leaving Certificate (HSLC)
             </h3>
             <p class="text-gray-600">85%</p>
@@ -1409,61 +1440,168 @@
         </div>
       </section>
     </main>
-    <footer class="bg-slate-900 flex justify-center items-center py-20">
-      <form name="contact" method="post"  data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="submit" id="contact-form" class="flex flex-col gap-5">
-        <div>
-          <input name="bot-field" class="hidden">
-        </div>
-        <div class="">
-          <label for="name" class="block text-sm font-medium text-gray-700"
-            >Name:</label
+    <footer class="bg-slate-900 py-20 pl-16 pr-5">
+      <section id="contact" class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="flex flex-col justify-center items-center">
+          <h1 class="text-white text-xl">Get in Touch</h1>
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onsubmit="submit"
+            id="contact-form"
+            class="flex flex-col gap-5"
           >
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            class="block w-full p-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          />
-        </div>
+            <div>
+              <input type="hidden" name="bot-field" value="contact" />
+            </div>
+            <div class="">
+              <label for="name" class="block text-sm font-medium text-gray-700"
+                >Name:</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="block w-full p-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              />
+            </div>
 
-        <div class="">
-          <label
-            for="email"
-            class="block text-sm font-medium text-gray-700"
-            >Email:</label
-          >
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            class=" block w-full p-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          />
-        </div>
+            <div class="">
+              <label for="email" class="block text-sm font-medium text-gray-700"
+                >Email:</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="block w-full p-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              />
+            </div>
 
-        <div class="">
-          <label for="message" class="block text-sm font-medium text-gray-700"
-            >Message:</label
-          >
-          <textarea
-            id="message"
-            name="message"
-            required
-            class=" block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            rows="4"
-          ></textarea>
-        </div>
+            <div class="">
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700"
+                >Message:</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                required
+                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                rows="4"
+              ></textarea>
+            </div>
 
-        <div class="w-full">
-          <button
-            type="submit"
-            class="w-full py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          >
-            Send
-          </button>
+            <div class="w-full">
+              <button
+                type="submit"
+                class="w-full py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              >
+                Send
+              </button>
+            </div>
+          </form>
         </div>
-      </form>
+        <div class="flex flex-col gap-5 text-gray-700">
+          <h1 class="text-white text-lg">Let's Connect</h1>
+          <div class="">
+            I love collaborating on innovative projects and am always open to
+            new opportunities. Whether you have a question, a project in mind,
+            or just want to say hi, don't hesitate to reach out. Here's how you
+            can get in touch with me:
+          </div>
+          <div class="flex flex-col gap-4">
+            <a href="tel:+91744876312" class="flex items-center gap-4">
+              <svg
+                viewBox="0 0 24 24"
+                fill="gray"
+                class="w-5 h-5"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+              +91 744876324</a
+            >
+            <a
+              href="mailto:jpsathiswaran@gmail.com"
+              class="flex items-center gap-4"
+            >
+              <svg
+                fill="gray"
+                class="w-5 h-5"
+                viewBox="0 0 1920 1920"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M0 1694.235h1920V226H0v1468.235ZM112.941 376.664V338.94H1807.06v37.723L960 1111.233l-847.059-734.57ZM1807.06 526.198v950.513l-351.134-438.89-88.32 70.475 378.353 472.998H174.042l378.353-472.998-88.32-70.475-351.134 438.89V526.198L960 1260.768l847.059-734.57Z"
+                    fill-rule="evenodd"
+                  ></path>
+                </g>
+              </svg>
+              jpsathiswaran@gmail.com</a
+            >
+
+            <a
+              href="https://maps.app.goo.gl/jXaUGGNo52yGT72v6"
+              target="_blank"
+              class="flex gap-4 items-center text-blue-500 hover:text-blue-600"
+            >
+              <svg
+                fill="#dd0e0e"
+                version="1.1"
+                class="w-8 h-8"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 395.71 395.71"
+                xml:space="preserve"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      d="M197.849,0C122.131,0,60.531,61.609,60.531,137.329c0,72.887,124.591,243.177,129.896,250.388l4.951,6.738 c0.579,0.792,1.501,1.255,2.471,1.255c0.985,0,1.901-0.463,2.486-1.255l4.948-6.738c5.308-7.211,129.896-177.501,129.896-250.388 C335.179,61.609,273.569,0,197.849,0z M197.849,88.138c27.13,0,49.191,22.062,49.191,49.191c0,27.115-22.062,49.191-49.191,49.191 c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+              F405 TVH park villa,4th Cross St, Vinayaganagar, MCN Nagar
+              Extension, Thoraipakkam, Tamil Nadu 600097
+            </a>
+          </div>
+        </div>
+      </section>
     </footer>
   </body>
   <script>
@@ -1513,14 +1651,19 @@
             if (entry.isIntersecting) {
               const animationName =
                 entry.target.dataset.animation || "defaultAnimation"; // Use a default animation if none specified
-              entry.target.classList.remove(animationName); // Reset animation
-              void entry.target.offsetWidth; // Trigger reflow
-              entry.target.classList.add(animationName); // Add animation class to trigger animation
+              // Check if the animation class is already there, only reset and add if not
+              if (!entry.target.classList.contains(animationName)) {
+                entry.target.classList.remove(animationName); // Reset animation
+                void entry.target.offsetWidth; // Trigger reflow
+                entry.target.classList.add(animationName); // Add animation class to trigger animation
+              }
             } else {
               // Optionally reset animation when element leaves view
               const animationName =
                 entry.target.dataset.animation || "defaultAnimation";
-              entry.target.classList.remove(animationName);
+              if (entry.target.classList.contains(animationName)) {
+                entry.target.classList.remove(animationName);
+              }
             }
           });
         },
